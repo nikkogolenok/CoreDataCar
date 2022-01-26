@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
     // MARK: - Variables
+    var context: NSManagedObjectContext!
     
     // MARK: - Outlet
     @IBOutlet weak var markLabel: UILabel!
@@ -36,6 +38,5 @@ class ViewController: UIViewController {
     
     @IBAction func rateAction(_ sender: UIButton) {
     }
-    
 }
 
