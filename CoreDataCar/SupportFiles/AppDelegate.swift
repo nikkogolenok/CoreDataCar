@@ -11,13 +11,13 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    var window: UIWindow?
+    //var window: UIWindow?
     
     // MARK: - AppDelegate
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let viewController = window?.rootViewController as! ViewController
-        viewController.context = persistentContainer.viewContext
+        //let viewController = window?.rootViewController as! ViewController
+        //viewController.context = persistentContainer.viewContext
         
         return true
     }

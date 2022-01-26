@@ -14,6 +14,7 @@
 		449AE97D27A1422D0073B7E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 449AE97C27A1422D0073B7E7 /* Assets.xcassets */; };
 		449AE98027A1422D0073B7E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449AE97E27A1422D0073B7E7 /* LaunchScreen.storyboard */; };
 		449AE98D27A16AFA0073B7E7 /* MyCars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 449AE98B27A16AFA0073B7E7 /* MyCars.xcdatamodeld */; };
+		449AE99327A17A220073B7E7 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 449AE99227A17A220073B7E7 /* data.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		449AE97F27A1422D0073B7E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		449AE98127A1422D0073B7E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		449AE98C27A16AFA0073B7E7 /* MyCars.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyCars.xcdatamodel; sourceTree = "<group>"; };
+		449AE98E27A177A20073B7E7 /* Car+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataClass.swift"; sourceTree = "<group>"; };
+		449AE98F27A177A20073B7E7 /* Car+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Car+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		449AE99227A17A220073B7E7 /* data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,8 @@
 		449AE96727A1422A0073B7E7 = {
 			isa = PBXGroup;
 			children = (
+				449AE98E27A177A20073B7E7 /* Car+CoreDataClass.swift */,
+				449AE98F27A177A20073B7E7 /* Car+CoreDataProperties.swift */,
 				449AE97227A1422A0073B7E7 /* CoreDataCar */,
 				449AE97127A1422A0073B7E7 /* Products */,
 			);
@@ -98,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				449AE98B27A16AFA0073B7E7 /* MyCars.xcdatamodeld */,
+				449AE99227A17A220073B7E7 /* data.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,6 +169,7 @@
 			files = (
 				449AE98027A1422D0073B7E7 /* LaunchScreen.storyboard in Resources */,
 				449AE97D27A1422D0073B7E7 /* Assets.xcassets in Resources */,
+				449AE99327A17A220073B7E7 /* data.plist in Resources */,
 				449AE97B27A1422A0073B7E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
