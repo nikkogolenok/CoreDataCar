@@ -15,6 +15,8 @@
 		449AE98027A1422D0073B7E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449AE97E27A1422D0073B7E7 /* LaunchScreen.storyboard */; };
 		449AE98D27A16AFA0073B7E7 /* MyCars.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 449AE98B27A16AFA0073B7E7 /* MyCars.xcdatamodeld */; };
 		449AE99327A17A220073B7E7 /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 449AE99227A17A220073B7E7 /* data.plist */; };
+		449AE99427A1805F0073B7E7 /* Car+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AE98E27A177A20073B7E7 /* Car+CoreDataClass.swift */; };
+		449AE99527A1805F0073B7E7 /* Car+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449AE98F27A177A20073B7E7 /* Car+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -181,6 +183,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				449AE99427A1805F0073B7E7 /* Car+CoreDataClass.swift in Sources */,
+				449AE99527A1805F0073B7E7 /* Car+CoreDataProperties.swift in Sources */,
 				449AE97827A1422A0073B7E7 /* ViewController.swift in Sources */,
 				449AE97427A1422A0073B7E7 /* AppDelegate.swift in Sources */,
 				449AE98D27A16AFA0073B7E7 /* MyCars.xcdatamodeld in Sources */,
