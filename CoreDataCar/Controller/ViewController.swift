@@ -55,6 +55,24 @@ class ViewController: UIViewController {
         }
     }
     
+    private func update(rating: Double) {
+        guard let car = car else { return }
+        car.rating = rating
+        
+        do {
+            try context.save()
+            inserdDataFrom(selectedCar: car)
+        }
+        catch {
+            let alertController = UIAlertController(title: "Wrong value", message: "Wrong input", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default)
+            alertController.addAction(okAction)
+            present(alertController, animated: true)
+            print(error.localizedDescription)
+        }
+
+    }
+    
     private func inserdDataFrom(selectedCar car: Car) {
         self.car = car
         carImageView.image = UIImage(data: car.imageData!)
@@ -123,9 +141,38 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startEngineAction(_ sender: UIButton) {
+        guard let car = car else { return }
+        car.timesDriven += 1
+        car.lastStarted = Date()
+        
+        do {
+            try context.save()
+            inserdDataFrom(selectedCar: car)
+        }
+        catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
     
     @IBAction func rateAction(_ sender: UIButton) {
+        let alertController = UIAlertController(title: "Rate it", message: "Rate thise car, please", preferredStyle: .alert)
+        
+        let rateAction = UIAlertAction(title: "Rate", style: .default) { action in
+            if let text = alertController.textFields?.first?.text {
+                self.update(rating: (text as NSString).doubleValue)
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+        
+        alertController.addTextField { textField in
+            textField.keyboardType = .numberPad
+        }
+        
+        alertController.addAction(rateAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
 }
 
