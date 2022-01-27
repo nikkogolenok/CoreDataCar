@@ -28,7 +28,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var lastTimeStartedLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var numberOfTripsLabel: UILabel!
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var segmentedControl: UISegmentedControl! {
+        didSet {
+            updateSegmentedControl()
+            segmentedControl.selectedSegmentTintColor = .white
+            let whiteTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            let blackTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+            
+            UISegmentedControl.appearance().setTitleTextAttributes(whiteTitleTextAttributes, for: .normal)
+            UISegmentedControl.appearance().setTitleTextAttributes(blackTitleTextAttributes, for: .selected)
+        }
+    }
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -138,6 +148,7 @@ class ViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func segmentedAction(_ sender: UISegmentedControl) {
+        updateSegmentedControl()
     }
     
     @IBAction func startEngineAction(_ sender: UIButton) {
